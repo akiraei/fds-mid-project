@@ -16,32 +16,75 @@
 <!-- ----------------log in secttion -------------------------- -->
 
 <form class="logInForm">
-  <input type="text" class="logInForm-id__input">
-  <input type="text" class="logInForm-pw__input"> 
+  <input type="text" name="id" class="logInForm-id__input">
+  <input type="text" name="pw" class="logInForm-pw__input"> 
   <button class="logIn__btn">log in</button>
 </form>
 
-<button class="logOut__btn">log Out</button>
+<button class="logOut__btn hidden">log Out</button>
 
 
 <!-- ----------------template secttion -------------------------- -->
 <!-- ----------------template secttion -------------------------- -->
-<!-- ----------------emplate secttion -------------------------- -->
+<!-- ----------------template secttion -------------------------- -->
 
 <div class="anchor"></div>
 
 
+
+<!-- ----------------to do list temp -------------------------- -->
+<!-- ----------------to do list temp -------------------------- -->
+
 <template class="toDoList">
-  <h1 class="toDoList-title">To Do</h1>
-  <p class="toDoList-content">
-    <span class="toDoList-content__title"></span>
-    <span class="toDoList-content__body"></span>
-    <span class="toDoList-content__time"></span>
-    <button class="toDoList-content__edit-btn"></button>
-    <button class="toDoList-content__delete-btn"></button>
-    <button class="toDoList-content__complete-btn"></button>
+  <form class="toDoList__newContent">
+    <div> 
+      <span>Title</span>
+      <input type="text" name="title" class="toDoList__newContent__input-title">
+    </div>
+    <div>
+      <span>Body</span>
+      <textarea name="body" class="toDoList__newContent__input-body"></textarea>
+    </div>
+      <button class="toDoList__newContent__submit-btn">submit</button>
+  </form>
+<div class="toDoList__anchor"></div>
+</template>
+
+<!-- ----------------to do item temp -------------------------- -->
+<!-- ----------------to do item temp -------------------------- -->
+
+
+<template class="toDoItem">
+  <p class="toDoItem-content">
+    <span class="toDoItem-content__title"></span>
+    <span class="toDoItem-content__body"></span>
+    <span class="toDoItem-content__time"></span>
+    <button class="toDoItem-content__edit-btn">edit</button>
+    <button class="toDoItem-content__delete-btn">delete</button>
+    <button class="toDoItem-content__complete-btn">complete</button>
   </p>
 </template>
+
+
+
+<!-- ----------------item edit temp -------------------------- -->
+<!-- ----------------item edit temp -------------------------- -->
+
+<template class="itemEdit">
+  <h1> Edit Page </h1>
+    <form class="itemEdit__form">
+        <div> 
+          <span>Title</span>
+          <input type="text" name="title" class="itemEdit__form__input-title">
+        </div>
+        <div>
+          <span>Body</span>
+          <textarea name="body" class="itemEdit__form__input-body"></textarea>
+        </div>
+          <button class="itemEdit__form__submit-btn">submit</button>
+      </form>
+</template>
+
 
 
 
