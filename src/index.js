@@ -61,6 +61,7 @@ function login(res) {
   function logout(){
     delete postAPI.defaults.headers['Authorization']
     localStorage.removeItem('token')
+    templates.anchor.textContent = ""; 
     loginBtn.classList.remove('hidden')
     idInput.classList.remove('hidden')
     pwInput.classList.remove('hidden')
