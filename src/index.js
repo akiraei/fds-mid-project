@@ -230,7 +230,7 @@ async function indexPage() {
     form.addEventListener("submit", async e => {
       const now = new Date()
       const parseNow = now.getFullYear().toString()
-      + "." + now.getMonth().toString()
+      + "." + (now.getMonth()+1).toString()
       + "." + now.getDate().toString()
       + " " + now.getHours().toString()
       + ":" + now.getMinutes().toString()
@@ -279,7 +279,7 @@ async function editPage(num) {
   form.addEventListener("submit", async e => {
     const now = new Date()
     const parseNow = now.getFullYear().toString()
-    + "." + now.getMonth().toString()
+    + "." + (now.getMonth()+1).toString()
     + "." + now.getDate().toString()
     + " " + now.getHours().toString()
     + ":" + now.getMinutes().toString()
