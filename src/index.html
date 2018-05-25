@@ -37,14 +37,14 @@
 
 <template class="toDoList">
   <form class="toDoList__newContent">
-    <div> 
-      <span>Title</span>
+    
+      <span class="toDoList__newContent-title" >Title</span>
       <input type="text" name="title" class="toDoList__newContent__input-title">
-    </div>
-    <div>
-      <span>Body</span>
+    
+    
+      <span class="toDoList__newContent-body">Body</span>
       <textarea name="body" class="toDoList__newContent__input-body"></textarea>
-    </div>
+    
       <button class="toDoList__newContent__submit-btn">submit</button>
   </form>
 <div class="toDoList__anchor"></div>
@@ -56,12 +56,16 @@
 
 <template class="toDoItem">
   <p class="toDoItem-content">
-    <span class="toDoItem-content__title"></span>
-    <span class="toDoItem-content__body"></span>
-    <span class="toDoItem-content__time"></span>
-    <button class="toDoItem-content__edit-btn">edit</button>
-    <button class="toDoItem-content__delete-btn">delete</button>
-    <button class="toDoItem-content__complete-btn">complete</button>
+    <span class="toDoItem-content__wrapper-front">
+      <span class="toDoItem-content__title"></span>
+      <span class="toDoItem-content__body"></span>
+      <span class="toDoItem-content__time"></span>
+    </span>
+    <span class="toDoItem-content__wrapper-back">
+      <button class="toDoItem-content__edit-btn">edit</button>
+      <button class="toDoItem-content__delete-btn">delete</button>
+      <button class="toDoItem-content__complete-btn">complete</button>
+    </span>
   </p>
 </template>
 

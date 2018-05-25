@@ -1,7 +1,18 @@
 $main-color: skyblue;
 
+button {
+  border-radius: 0.6rem;
+}
+
 body {
-  background-color: $main-color;
+  color: #F5EF96;
+  background-color: #5F4B8B;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-content: space-between;
+  align-items: center;
+
 }
 
 .hidden {
@@ -10,4 +21,65 @@ body {
 
 .lining > span {
   text-decoration: line-through
+}
+
+
+.logOut__btn, .logIn__btn {
+   width: 5rem;
+}
+
+.toDoList__newContent {
+  margin : 2rem;
+  // width: 70vw;
+  display: grid;
+  grid-template-columns: 1fr 6fr 8rem;
+    grid-auto-rows: 1fr 1fr;
+    grid-template-areas: 
+      "title title-content ."
+      "body body-content submit";
+
+  &__input-title{
+    grid-area: title-content;
+  }
+  &__input-body {
+    grid-area: body-content;  
+  }
+  &-title {
+    grid-area: title;
+    align-self: center;
+    justify-self: center;
+  }
+  &-body {
+    grid-area: body;
+    align-self: center;
+    justify-self: center;
+  }
+  &__submit-btn {
+    grid-area: submit;
+    width: 5rem;
+    align-self: center;
+    justify-self: center;
+  }
+
+}
+
+.toDoItem-content {
+  width: 80vw;
+  margin : 1rem;
+  // width: 70vw;
+  display: grid;
+  grid-template-columns: 1fr 12rem;
+  grid-template-rows: 1fr;
+  grid-template-areas: 
+      "front back";
+      &__wrapper-front {
+        grid-area: front;
+        align-self: flex-start;
+    justify-self: center;
+      }
+      &__wrapper-back {
+        grid-area: back;
+        align-self: flex-end;
+    justify-self: center;
+      }
 }
