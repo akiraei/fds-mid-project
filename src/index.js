@@ -44,6 +44,7 @@ function login(res) {
       loginBtn.classList.add('hidden')
       idInput.classList.add('hidden')
       pwInput.classList.add('hidden')
+      indexPage()
       
     } else if (res){
     localStorage.setItem('token', res.data.token)
@@ -53,7 +54,7 @@ function login(res) {
     loginBtn.classList.add('hidden')
     idInput.classList.add('hidden')
     pwInput.classList.add('hidden')
-    
+    indexPage()
     }
   }
   
@@ -64,7 +65,7 @@ function login(res) {
     idInput.classList.remove('hidden')
     pwInput.classList.remove('hidden')
     logoutBtn.classList.add('hidden')
-   
+    indexPage()
   }
   
   
@@ -128,7 +129,7 @@ async function indexPage() {
 
   if(localStorage.getItem('token')) {
 
-    login()
+
 
 
     //-------------todo list template-----------------------
@@ -252,7 +253,7 @@ async function indexPage() {
 
         render(listFragment)
   } else {
-    logout()
+
     templates.anchor.textContent = ""; 
   }
 }
@@ -320,4 +321,8 @@ async function editPage(num) {
 //--------------------action----------------------
 
 
-indexPage()
+if(localStorage.getItem('token')){
+  login()
+} else {
+  iogout()
+}
