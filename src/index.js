@@ -128,6 +128,8 @@ async function indexPage() {
 
   if(localStorage.getItem('token')) {
 
+    login()
+
 
     //-------------todo list template-----------------------
     const res = await postAPI.get('./contents')
@@ -173,6 +175,9 @@ async function indexPage() {
   
   
       } else {
+
+
+        logOut()
         
         
         
@@ -312,5 +317,6 @@ async function editPage(num) {
 //--------------------action----------------------
 //--------------------action----------------------
 //--------------------action----------------------
+
 
 indexPage()
